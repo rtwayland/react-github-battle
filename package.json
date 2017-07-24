@@ -1,10 +1,13 @@
 {
   "name": "react-github-battle",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project for React Training's fundamental course.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --open"
+  },
+  "babel": {
+    "presets": ["env", "react"]
   },
   "repository": {
     "type": "git",
