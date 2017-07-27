@@ -3,6 +3,7 @@ import queryString from 'query-string'
 import api from '../utils/api'
 import {Link} from 'react-router-dom'
 import PlayerPreview from './PlayerPreview'
+import Loading from './Loading'
 
 
 const Profile = (props) => {
@@ -84,7 +85,7 @@ class Results extends React.Component {
 		let loading = this.state.loading
 
 		if (loading) {
-			return <p>Loading</p>
+			return <Loading />
 		}
 
 		if (error) {
