@@ -8,7 +8,7 @@ const getProfile = (username) => {
 }
 
 const getRepos = (username) => {
-	return axios.get(`https://api.github.com/users/${username}/repos&per_page=100`)
+	return axios.get(`https://api.github.com/users/${username}/repos?per_page=100`)
 }
 
 const getStarCount = (repos) => {
@@ -49,7 +49,7 @@ const sortPlayers = (players) => {
 
 const GithubAPI = {
 	battle: (players) => {
-		return axios.all([players.map(getUserData)])
+		return axios.all(players.map(getUserData))
 			.then(sortPlayers)
 			.catch(handleError)
 	},
